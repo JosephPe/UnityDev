@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         direction.z = Input.GetAxis("Vertical");
 
         Vector3 rotation = Vector3.zero;
-        direction.y = Input.GetAxis("Horizontal");
+        rotation.y = Input.GetAxis("Horizontal");
 
         Quaternion rotate = Quaternion.Euler(rotation * rotationRate * Time.deltaTime);
         transform.rotation = transform.rotation * rotate;
